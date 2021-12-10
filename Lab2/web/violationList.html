@@ -29,12 +29,6 @@ and open the template in the editor.
         <div>
             <table border="1">
             <tr><th>ID</th><th>Car number</th><th>Owner</th><th>Type</th><th>DateTime</th><th>Fine</th></tr>
-<tr><td>123_123_101221_1440</td><td>123</td><td>123</td><td>123</td><td>10/12/2021 14:40</td><td>123</td></tr>
-
-<tr><td>132_123_101221_1430</td><td>132</td><td>123</td><td>123</td><td>10/12/2021 14:30</td><td>123</td></tr>
-
-<tr><td>Violation_Violation_101221_1430</td><td>Violation</td><td>Violation</td><td>Violation</td><td>10/12/2021 14:30</td><td>123</td></tr>
-
             </table><br>
         </div>
         <div style="padding: 1em; border: 1px solid steelblue; border-radius: 1em; width: auto; height: 20px;">
@@ -45,7 +39,11 @@ and open the template in the editor.
             </form>
             <form action="EditViolation" method="GET" style="float: left;">
                 <button type="submit" name ="Edit">Edit Violation</button>
-                <label for="ID">ID:</label><input type="text" id="ID" name="ID" style="width: 300px;">
+                <label for="ID">ID:</label><input type="text" id="ID" name="ID" style="width: 300px; margin-right: 100px">
+            </form>
+            <form action="DeleteViolation" method="POST" style="float: left;">
+                <button type="submit" name ="Delete">Delete Violation</button>
+                <label for="ID2">ID:</label><input type="text" id="ID2" name="ID" style="width: 300px;">
             </form>
         </div>
     </body>

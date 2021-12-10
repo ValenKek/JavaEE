@@ -1,0 +1,75 @@
+<!DOCTYPE html5>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Violations</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+          form{
+          margin: 0 auto;
+          width: 300px;
+          padding: 1em;
+          border: 1px solid #CCC;
+          border-radius: 1em;
+          border-color: steelblue
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        form li + li {
+          margin-top: 1em;
+        }
+
+        label {
+          font: 1em sans-serif;
+          display: inline-block;
+          width: 100px;
+          text-align: right;
+        }
+
+        input,
+        textarea {
+          font: 1em sans-serif;
+          box-sizing: border-box;
+          border: 1px solid #999;
+
+        input:focus,
+        textarea:focus {
+          border-color: #000;
+        }
+
+        textarea {
+          vertical-align: top;
+          height: 5em;
+        }
+
+        button {
+          margin-left: .5em;
+        }
+        
+        div {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        </style>
+    </head>
+    <body>
+        <form action="setUserRole" method="POST">
+            <div><label for="userName">Login: </label><input type="text" id="userName" name="userName" style="width: 200px"/></div>
+            <div><label for="password">Password: </label><input type="password" id="password" name="password" style="width: 200px"/></div>
+            <div><label>User role: </label></div>
+            <div><input type="radio" id="User" name="userRole" value="User" checked/><label for="User" style="text-align:  left;">User</label></div>
+            <div><input type="radio" id="Admin" name="userRole" value="Administrator" /><label for="Admin" style="text-align: left;">Administrator</label></div>
+            <div align="center"><button type="submit">Sign in</button></div>
+        </form>
+    </body>
+</html>
