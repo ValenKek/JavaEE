@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Edit Violation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+          form {
+          margin: 0 auto;
+          width: 600px;
+          padding: 1em;
+          border: 1px solid #CCC;
+          border-radius: 1em;
+          border-color: steelblue
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        form li + li {
+          margin-top: 1em;
+        }
+
+        label {
+          font: 1em sans-serif;
+          display: inline-block;
+          width: 300px;
+          text-align: right;
+        }
+
+        input,
+        textarea {
+          font: 1em sans-serif;
+          width: 300px;
+          box-sizing: border-box;
+
+          border: 1px solid #999;
+        }
+
+        input:focus,
+        textarea:focus {
+          border-color: #000;
+        }
+
+        textarea {
+          vertical-align: top;
+          height: 5em;
+        }
+
+        .button {
+          padding-left: 90px;
+        }
+
+        button {
+          margin-left: .5em;
+        }
+        
+        div {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        </style>
+    </head>
+    <body>
+        <form action="EditViolation" method="POST">
+            <div>
+                <label for="ID">ID: </label><input type="text" id="ID" name="ID" value="_ID_" readonly/>
+            </div>
+            <div>
+                <label for="carNum">Car number: </label><input type="text" id="carNum" name="carNum" value="CARNUM"/>
+            </div>
+            <div>
+                <label for="ownerName">Owner name: </label><input type="text" id="ownerName" name="ownerName" value="OWNERNAME"/>
+            </div>
+            <div>
+                <label for="violationType">Type of violation: </label><input type="text" id="violationType" name="violationType" value="VIOLATIONTYPE"/>
+            </div>
+            <div>
+                <label for="dateTime">Date and time: </label><input type="datetime-local" id="dateTime" name="dateTime" value="DATETIME"/>
+            </div>
+            <div>
+                <label for="fine">Fine in hryvnias: </label><input type="number" min="0" step=".01" id="fine" name="fine" value="FINE"/>
+            </div>
+            <div>
+                <center><button type="submit">Edit data</button></center>
+            </div>
+        </form>
+</html>
