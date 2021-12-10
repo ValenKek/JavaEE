@@ -6,7 +6,6 @@ package workWithDB;
 
 import violation.Violation;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -15,18 +14,14 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
-import javax.inject.Named;
 
 /**
  *
  * @author User
  */
-@Sqlite
+@SQLite
 @RequestScoped
 public class DAO_violation_Sqlite implements DAO<Violation>{
     
